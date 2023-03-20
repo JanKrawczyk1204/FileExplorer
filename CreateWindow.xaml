@@ -1,0 +1,25 @@
+﻿<Window x:Class="Lab2.CreateWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Lab2"
+        mc:Ignorable="d"
+        Title="Create File" Height="300" Width="300">
+    <Grid>
+        <TextBlock Margin="0,0,200,200" Height="20" Width="50">Name:</TextBlock>
+        <TextBox Margin="70,0,0,200" x:Name="textbox" Height="20" Width="200">Name</TextBox>
+        <StackPanel Margin="10,10,10,130" Height="20" Width="120" Orientation="Horizontal">
+            <RadioButton GroupName="myGroup" x:Name="fileRadio" IsChecked="True">File</RadioButton>
+            <RadioButton GroupName="myGroup" x:Name="directoryRadio">Directory</RadioButton>
+        </StackPanel>
+        <StackPanel Margin="0,0,0,10" Width="80" Height="60">
+            <CheckBox x:Name="rCheck">ReadOnly</CheckBox>
+            <CheckBox x:Name="aCheck">Archive</CheckBox>
+            <CheckBox x:Name="hCheck">Hidden</CheckBox>
+            <CheckBox x:Name="sCheck">System</CheckBox>
+        </StackPanel>
+        <Button Margin="0,150,100,0" Width="80" Height="20" Click="CreateOk">Ok</Button>
+        <Button Margin="100,150,0,0" Width="80" Height="20" Click="CreateCancel">Cancel</Button>
+    </Grid>
+</Window>
